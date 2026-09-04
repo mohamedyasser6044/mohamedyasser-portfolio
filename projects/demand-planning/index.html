@@ -27,41 +27,66 @@
     <span class="build-tag" style="font-size:14px; margin-bottom:14px; display:inline-block;">Power BI · Private project</span>
     <h2 style="font-size:32px; font-weight:500; max-width: 32ch;">Demand Planning Dashboard</h2>
     <p class="hero-body" style="margin-top: 16px;">
-      <em>Placeholder — replace this paragraph with the real explanation: what business question
-      the dashboard answers, who uses it, and what decisions it drives. See the draft outline
-      below for the shape this can take.</em>
+      A two-page Power BI report for pharmaceutical demand planning, built on Viatris Pharma
+      supply-chain data. It answers one question for planners and commercial leadership:
+      <strong>are we fulfilling the demand we forecast, and where is stock about to become a
+      problem?</strong> Page one is the executive view — sales, stock position, pending orders,
+      incoming shipments and product-level supply risk. Page two goes into demand accuracy —
+      demand vs. actual fulfillment, forecast accuracy against target, and inventory movement
+      month over month.
     </p>
   </section>
 
   <section class="ledger" style="padding-top: 10px;">
     <h3 class="section-label">Screenshots</h3>
-    <div style="border: 2px dashed var(--line); padding: 60px 20px; text-align: center; color: var(--slate); margin-bottom: 10px;">
-      Screenshot pending — drop report page images here (e.g. <code>screenshots/page1.png</code>)
-      and reference them below.
-    </div>
-    <!-- Once you have images, replace the box above with something like:
-    <img src="screenshots/page1.png" alt="Demand Planning — overview page" style="width:100%; border:1px solid var(--line); margin-bottom: 24px;">
-    -->
+
+    <figure style="margin: 0 0 32px;">
+      <img src="screenshots/executive-summary.png" alt="Demand Planning dashboard — Executive Summary page"
+           style="width:100%; border:1px solid var(--line); display:block;">
+      <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
+        <strong style="color: var(--ink);">Executive Summary</strong> — net sales with MoM comparison,
+        available stock split into released vs. quarantine, pending orders and incoming shipments,
+        a Pareto view of which products carry 80% of sales, and a product-level supply-risk table
+        with near-expiry batches.
+      </figcaption>
+    </figure>
+
+    <figure style="margin: 0 0 12px;">
+      <img src="screenshots/demand-fulfillment.png" alt="Demand Planning dashboard — Demand and Fulfillment page"
+           style="width:100%; border:1px solid var(--line); display:block;">
+      <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
+        <strong style="color: var(--ink);">Demand &amp; Fulfillment</strong> — gross inventory
+        (EGAB, EGAC, reserve) with month-over-month movement, demand vs. delivered quantity,
+        forecast accuracy against target, and a colour-coded KPI matrix covering demand, sales,
+        delivery, FCA % and BIAS by month.
+      </figcaption>
+    </figure>
   </section>
 
   <section class="builds" style="padding-top: 10px;">
-    <h3 class="section-label">Draft outline <span style="font-size: 14px; color: var(--slate); font-weight: 400;">(confirm against the real report before publishing)</span></h3>
+    <h3 class="section-label">What&rsquo;s in it</h3>
     <div class="stock-grid" style="border-top: 1px solid var(--line);">
       <div class="stock-row">
         <span class="stock-label">Business question</span>
-        <span class="stock-items"><em>e.g. "How accurate is our demand forecast, and where is stock at risk of overstock or stockout?"</em></span>
+        <span class="stock-items">Are we fulfilling forecast demand, how accurate was the forecast,
+          and which products are heading for a shortage or an expiry write-off?</span>
       </div>
       <div class="stock-row">
-        <span class="stock-label">Likely KPIs</span>
-        <span class="stock-items">Forecast Accuracy · Forecast vs. Actual Demand · Variance % · Stock Coverage / Days of Supply · Capacity Utilization</span>
+        <span class="stock-label">KPIs</span>
+        <span class="stock-items">Net Sales &amp; MoM % · Forecast Accuracy (FCA %) vs. target · BIAS ·
+          Demand vs. Delivered Quantity · Supply Covered % / Shortage % · Gross Inventory
+          (EGAB, EGAC, Reserve) · Pending Orders · Incoming Shipments &amp; next ETA</span>
       </div>
       <div class="stock-row">
-        <span class="stock-label">Likely breakdowns</span>
-        <span class="stock-items">By product / SKU · by warehouse or location · by month</span>
+        <span class="stock-label">Breakdowns</span>
+        <span class="stock-items">By product · by customer · by month and year · by batch (expiry) ·
+          by warehouse delivery date</span>
       </div>
       <div class="stock-row">
         <span class="stock-label">Techniques</span>
-        <span class="stock-items">Power BI data modeling · DAX measures · forecast-vs-actual variance analysis · time-series trend visuals</span>
+        <span class="stock-items">DAX measures for MoM deltas, FCA %, BIAS and Pareto cumulative % ·
+          conditional formatting driven by measure-returned colour codes · SVG measures rendering
+          inline risk bars inside a table · page and bookmark navigators · custom branded theme</span>
       </div>
     </div>
   </section>
