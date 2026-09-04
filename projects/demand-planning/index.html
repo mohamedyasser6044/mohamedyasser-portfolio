@@ -44,10 +44,11 @@
       <img src="screenshots/executive-summary.png" alt="Demand Planning dashboard — Executive Summary page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
-        <strong style="color: var(--ink);">Executive Summary</strong> — net sales with MoM comparison,
-        available stock split into released vs. quarantine, pending orders and incoming shipments,
-        a Pareto view of which products carry 80% of sales, and a product-level supply-risk table
-        with near-expiry batches.
+        <strong style="color: var(--ink);">Executive Summary</strong> — current sales with
+        month-over-month comparison, available stock split into released vs. quarantine, pending
+        orders and incoming shipments with next ETA. The centre panel switches between Sales Trend,
+        a Pareto view of which products carry 80% of sales, and a product-level supply-risk table;
+        below it, near-expiry batches by SLED/BBD and inbound quantity by delivery date.
       </figcaption>
     </figure>
 
@@ -55,10 +56,11 @@
       <img src="screenshots/demand-fulfillment.png" alt="Demand Planning dashboard — Demand and Fulfillment page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
-        <strong style="color: var(--ink);">Demand &amp; Fulfillment</strong> — gross inventory
-        (EGAB, EGAC, reserve) with month-over-month movement, demand vs. delivered quantity,
-        forecast accuracy against target, and a colour-coded KPI matrix covering demand, sales,
-        delivery, FCA % and BIAS by month.
+        <strong style="color: var(--ink);">Demand &amp; Fulfillment</strong> — total inventory,
+        warehouse (EGAB), inbound (EGAC) and reserve values with month-over-month movement;
+        demand vs. actual delivered quantity; forecast accuracy against target; and a colour-coded
+        KPI matrix covering sales, delivery, demand, BIAS and FCA % against prior month, prior
+        quarter and year to date.
       </figcaption>
     </figure>
   </section>
@@ -73,9 +75,10 @@
       </div>
       <div class="stock-row">
         <span class="stock-label">KPIs</span>
-        <span class="stock-items">Net Sales &amp; MoM % · Forecast Accuracy (FCA %) vs. target · BIAS ·
-          Demand vs. Delivered Quantity · Supply Covered % / Shortage % · Gross Inventory
-          (EGAB, EGAC, Reserve) · Pending Orders · Incoming Shipments &amp; next ETA</span>
+        <span class="stock-items">Current Sales &amp; MoM % · Forecast Accuracy (FCA %) vs. target ·
+          BIAS / over- &amp; under-selling · Demand vs. Delivered Quantity · Supply Covered % /
+          Shortage % · Total Inventory, Warehouse (EGAB), Inbound (EGAC) &amp; Reserve values ·
+          Pending Orders · Incoming Shipments &amp; next ETA</span>
       </div>
       <div class="stock-row">
         <span class="stock-label">Breakdowns</span>
