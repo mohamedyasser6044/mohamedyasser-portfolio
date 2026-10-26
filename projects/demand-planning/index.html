@@ -27,15 +27,10 @@
     <span class="build-tag" style="font-size:14px; margin-bottom:14px; display:inline-block;">Power BI · Private project</span>
     <h2 style="font-size:32px; font-weight:500; max-width: 32ch;">Demand Planning Dashboard</h2>
     <p class="hero-body" style="margin-top: 16px;">
-      A three-page Power BI report for pharmaceutical demand planning, modeled on the
-      supply-chain reporting I build at Viatris Pharma. Product names and all figures shown here
-      are anonymized. It answers one question for planners and commercial leadership:
-      <strong>are we fulfilling the demand we forecast, and where is stock about to become a
-      problem?</strong> Page one is the executive view — sales, stock position, pending orders,
-      incoming shipments and product-level supply risk. Page two goes into demand accuracy —
-      demand vs. actual fulfillment, forecast accuracy against target, and inventory movement
-      month over month. Page three tracks the stock itself — what is available, returned, expiring
-      and moving in and out of the warehouse.
+      A three-page Power BI report for demand planning in a pharma company, based on the reports I
+      build at work at Viatris. I changed the product names and all the numbers, so nothing here is
+      real company data. The main question it answers is simple: <strong>are we delivering what
+      customers ordered, how good was our forecast, and which products are at risk?</strong>
     </p>
   </section>
 
@@ -43,36 +38,33 @@
     <h3 class="section-label">Screenshots</h3>
 
     <figure style="margin: 0 0 32px;">
-      <img src="screenshots/executive-summary.png" alt="Demand Planning dashboard — Executive Summary page"
+      <img src="screenshots/executive-summary.png" alt="Demand Planning dashboard, Executive Summary page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
-        <strong style="color: var(--ink);">Executive Summary</strong> — current sales with
-        month-over-month comparison, available stock split into released vs. quarantine, pending
-        orders and incoming shipments with next ETA; the 12-month sales trend with peak month and top
-        product; a Pareto view of which products carry 80% of sales; and a product-level supply-risk
-        table comparing released stock against open orders.
+        <strong style="color: var(--ink);">Executive Summary</strong>: this month's sales compared with last month, available
+        stock (released and quarantined), pending orders, incoming shipments and the next arrival date.
+        Below that, the sales trend for the year, a Pareto chart of the products that make 80% of sales,
+        and a supply-risk table that compares released stock with open orders for each product.
       </figcaption>
     </figure>
 
     <figure style="margin: 0 0 32px;">
-      <img src="screenshots/demand-fulfillment.png" alt="Demand Planning dashboard — Demand and Fulfillment page"
+      <img src="screenshots/demand-fulfillment.png" alt="Demand Planning dashboard, Demand and Fulfillment page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
-        <strong style="color: var(--ink);">Demand &amp; Fulfillment</strong> — total inventory,
-        warehouse (EGAB), inbound (EGAC) and reserve values with month-over-month movement;
-        demand vs. actual delivered quantity; forecast accuracy against target; and a colour-coded
-        KPI matrix covering sales, delivery, demand, BIAS and FCA % against prior month, prior
-        quarter and year to date.
+        <strong style="color: var(--ink);">Demand &amp; Fulfillment</strong>: inventory, warehouse, inbound and reserve values
+        compared with last month, demand vs. what we actually delivered, forecast accuracy against the
+        target, and a KPI table with sales, delivered quantity, demand, bias and forecast accuracy
+        against last month, last quarter and the year to date.
       </figcaption>
     </figure>
     <figure style="margin: 0 0 12px;">
-      <img src="screenshots/inventory-summary.png" alt="Demand Planning dashboard — Inventory Summary page"
+      <img src="screenshots/inventory-summary.png" alt="Demand Planning dashboard, Inventory Summary page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
-        <strong style="color: var(--ink);">Inventory Summary</strong> — available stock split into
-        released vs. quarantine, EPX stock, current returns and expiry returns with month-over-month
-        change; the top 10 products by stock; monthly IN &amp; OUT movement; and a stamping table that
-        flags which orders need stamps before they can ship.
+        <strong style="color: var(--ink);">Inventory Summary</strong>: available stock, EPX stock, returns and expiry returns
+        compared with last month, the top 10 products by stock, monthly stock in and out, and a table
+        that shows which orders need stamps before they can ship.
       </figcaption>
     </figure>
   </section>
@@ -82,34 +74,33 @@
     <div class="stock-grid" style="border-top: 1px solid var(--line);">
       <div class="stock-row">
         <span class="stock-label">Business question</span>
-        <span class="stock-items">Are we fulfilling forecast demand, how accurate was the forecast,
-          and which products are heading for a shortage or an expiry write-off?</span>
+        <span class="stock-items">Are we delivering the demand we forecast, how accurate was the forecast,
+          and which products could run short or expire?</span>
       </div>
       <div class="stock-row">
         <span class="stock-label">KPIs</span>
-        <span class="stock-items">Current Sales &amp; MoM % · Forecast Accuracy (FCA %) vs. target ·
-          BIAS / over- &amp; under-selling · Demand vs. Delivered Quantity · Supply Covered % /
-          Shortage % · Total Inventory, Warehouse (EGAB), Inbound (EGAC) &amp; Reserve values ·
-          Pending Orders · Incoming Shipments &amp; next ETA</span>
+        <span class="stock-items">Sales and change vs. last month · Forecast accuracy (FCA %) · Bias ·
+          Demand vs. delivered quantity · Supply covered % · Inventory, warehouse, inbound and reserve
+          values · Pending orders · Incoming shipments</span>
       </div>
       <div class="stock-row">
         <span class="stock-label">Breakdowns</span>
-        <span class="stock-items">By product · by customer · by month and year · by stock status (released / quarantine) ·
-          by warehouse delivery date</span>
+        <span class="stock-items">Product · customer · month and year · released / quarantined stock ·
+          delivery date</span>
       </div>
       <div class="stock-row">
         <span class="stock-label">Techniques</span>
-        <span class="stock-items">DAX measures for MoM deltas, FCA %, BIAS and Pareto cumulative % ·
-          conditional formatting driven by measure-returned colour codes · SVG measures rendering
-          inline risk bars inside a table · page and bookmark navigators · custom branded theme</span>
+        <span class="stock-items">DAX measures for month-over-month change, FCA %, bias and Pareto % ·
+          conditional formatting with colour measures · risk bars inside a table · page navigation
+          with bookmarks · custom theme</span>
       </div>
     </div>
   </section>
 
   <section class="stock" style="padding-top: 30px;">
     <p style="color: var(--slate); font-size: 15px;">
-      This is a private project — the repository isn't public, so no GitHub link is shown here.
-      Reach out directly for a walkthrough or a shared copy of the report.
+      This project uses work data, so I can't share the file publicly. Contact me if you'd like a
+      walkthrough.
     </p>
   </section>
 
