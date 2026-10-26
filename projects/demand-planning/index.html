@@ -11,7 +11,7 @@
 <header class="masthead">
   <div class="masthead-inner">
     <div class="id-block">
-      <span class="id-code">MY-04</span>
+      <span class="id-code">MY-05</span>
       <h1>Mohamed Yasser Kamal</h1>
       <p class="role">Inventory Controller &amp; Data Analyst — Obour City, Cairo, Egypt</p>
     </div>
@@ -27,13 +27,15 @@
     <span class="build-tag" style="font-size:14px; margin-bottom:14px; display:inline-block;">Power BI · Private project</span>
     <h2 style="font-size:32px; font-weight:500; max-width: 32ch;">Demand Planning Dashboard</h2>
     <p class="hero-body" style="margin-top: 16px;">
-      A two-page Power BI report for pharmaceutical demand planning, built on Viatris Pharma
-      supply-chain data. It answers one question for planners and commercial leadership:
+      A three-page Power BI report for pharmaceutical demand planning, modeled on the
+      supply-chain reporting I build at Viatris Pharma. Product names and all figures shown here
+      are anonymized. It answers one question for planners and commercial leadership:
       <strong>are we fulfilling the demand we forecast, and where is stock about to become a
       problem?</strong> Page one is the executive view — sales, stock position, pending orders,
       incoming shipments and product-level supply risk. Page two goes into demand accuracy —
       demand vs. actual fulfillment, forecast accuracy against target, and inventory movement
-      month over month.
+      month over month. Page three tracks the stock itself — what is available, returned, expiring
+      and moving in and out of the warehouse.
     </p>
   </section>
 
@@ -46,13 +48,13 @@
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
         <strong style="color: var(--ink);">Executive Summary</strong> — current sales with
         month-over-month comparison, available stock split into released vs. quarantine, pending
-        orders and incoming shipments with next ETA. The centre panel switches between Sales Trend,
-        a Pareto view of which products carry 80% of sales, and a product-level supply-risk table;
-        below it, near-expiry batches by SLED/BBD and inbound quantity by delivery date.
+        orders and incoming shipments with next ETA; the 12-month sales trend with peak month and top
+        product; a Pareto view of which products carry 80% of sales; and a product-level supply-risk
+        table comparing released stock against open orders.
       </figcaption>
     </figure>
 
-    <figure style="margin: 0 0 12px;">
+    <figure style="margin: 0 0 32px;">
       <img src="screenshots/demand-fulfillment.png" alt="Demand Planning dashboard — Demand and Fulfillment page"
            style="width:100%; border:1px solid var(--line); display:block;">
       <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
@@ -61,6 +63,16 @@
         demand vs. actual delivered quantity; forecast accuracy against target; and a colour-coded
         KPI matrix covering sales, delivery, demand, BIAS and FCA % against prior month, prior
         quarter and year to date.
+      </figcaption>
+    </figure>
+    <figure style="margin: 0 0 12px;">
+      <img src="screenshots/inventory-summary.png" alt="Demand Planning dashboard — Inventory Summary page"
+           style="width:100%; border:1px solid var(--line); display:block;">
+      <figcaption style="color: var(--slate); font-size: 14px; margin-top: 10px;">
+        <strong style="color: var(--ink);">Inventory Summary</strong> — available stock split into
+        released vs. quarantine, EPX stock, current returns and expiry returns with month-over-month
+        change; the top 10 products by stock; monthly IN &amp; OUT movement; and a stamping table that
+        flags which orders need stamps before they can ship.
       </figcaption>
     </figure>
   </section>
@@ -82,7 +94,7 @@
       </div>
       <div class="stock-row">
         <span class="stock-label">Breakdowns</span>
-        <span class="stock-items">By product · by customer · by month and year · by batch (expiry) ·
+        <span class="stock-items">By product · by customer · by month and year · by stock status (released / quarantine) ·
           by warehouse delivery date</span>
       </div>
       <div class="stock-row">
